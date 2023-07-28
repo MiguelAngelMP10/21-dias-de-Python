@@ -4,6 +4,10 @@ from Car import Car
 from product import Product
 from User import User
 
+from Animal import Animal
+from Dog import Dog
+from Mammal import Mammal
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     toyota = Car("Toyota", "Corolla", 2020, 0)
@@ -71,3 +75,14 @@ if __name__ == '__main__':
 
     usuario1.sendMessage("Hola Maria!", usuario2)
     print(usuario1.showMessages())
+
+    # Playground - Jerarquía de animales usando herencia
+    bird = Animal("pepe", 1, "bird")
+    print(bird.getInfo())
+
+    hippo = Mammal("bartolo", 3, "hippo", False)
+    print(hippo.getInfo())
+
+    dog = Dog("fido", 4, "pastor aleman");
+    print(dog.bark())
+    print(dog.getInfo())
