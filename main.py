@@ -9,6 +9,7 @@ from Dog import Dog
 from Mammal import Mammal
 from MyList import MyList
 from ContactList import ContactList
+from TaskManager import TaskManager
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -153,3 +154,10 @@ if __name__ == '__main__':
     contactList.insert("Mr michi", "123-456-7890")
 
     print(contactList.get("Mr Michi"))
+
+    myTaskManager = TaskManager()
+    myTaskManager.addTask("Comprar leche", ["compras", "urgente"])
+    myTaskManager.addTask("Sacar al perro", ["mascotas"])
+    myTaskManager.addTask("Hacer ejercicio", ["salud"])
+
+    print(myTaskManager.printTasks())
