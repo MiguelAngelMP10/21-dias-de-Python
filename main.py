@@ -2,6 +2,7 @@
 
 from Car import Car
 from product import Product
+from User import User
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -54,3 +55,19 @@ if __name__ == '__main__':
     cart.addProduct(course)
     total = cart.calculateTotal()
     print(total)
+
+    usuario1 = User("Juan", 20)
+    usuario2 = User("Maria", 25)
+    usuario3 = User("Pedro", 30)
+    usuario4 = User("Lina", 25)
+
+    print(usuario1.name, usuario1.age)
+    print(usuario2.name, usuario2.age)
+
+    usuario1.addFriend(usuario2)
+    usuario1.addFriend(usuario3)
+    usuario1.addFriend(usuario4)
+    print(usuario1.getFriends())
+
+    usuario1.sendMessage("Hola Maria!", usuario2)
+    print(usuario1.showMessages())
