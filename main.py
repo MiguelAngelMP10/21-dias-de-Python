@@ -13,6 +13,8 @@ from TaskManager import TaskManager
 
 from PatientList import PatientList
 
+from Playlist import Playlist
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     toyota = Car("Toyota", "Corolla", 2020, 0)
@@ -172,3 +174,11 @@ if __name__ == '__main__':
 
     list.removePatient("Paciente 1")
     print(list.getPatientList())
+
+    playlist = Playlist()
+
+    playlist.addSong("Bohemian Rhapsody")
+    playlist.addSong("Stairway to Heaven")
+    playlist.addSong("Hotel California")
+
+    print(playlist.getPlaylist())
