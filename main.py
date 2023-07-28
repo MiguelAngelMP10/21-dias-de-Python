@@ -7,6 +7,7 @@ from User import User
 from Animal import Animal
 from Dog import Dog
 from Mammal import Mammal
+from MyList import MyList
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -86,3 +87,59 @@ if __name__ == '__main__':
     dog = Dog("fido", 4, "pastor aleman");
     print(dog.bark())
     print(dog.getInfo())
+
+    lista = MyList()
+    print(type(lista))
+    lista.append("a")
+    lista.append("b")
+    lista.append("c")
+    lista.append("d")
+    lista.append("e")
+    lista.append("f")
+
+    print("original")
+    print(lista.data)
+    print(lista.length)
+    print("")
+
+    print("operacion pop")
+    print(lista.pop())
+    print(lista.data)
+    print(lista.length)
+    print("")
+
+    print("operacion shift")
+    print(lista.shift())
+    print(lista.data)
+    print(lista.length)
+    print("")
+
+    print("operacion unshift")
+    print(lista.unshift("aa"))
+    print(lista.data)
+    print(lista.length)
+    print("")
+
+    print("operacion map")
+    lista1 = lista.map(lambda x: x * 3)
+    print(lista.data)
+    print(lista.length)
+    print("mapeada")
+    print(lista1.data)
+    print(lista1.length)
+    print("")
+
+    print("operacion filter")
+    lista2 = lista.filter(lambda x: True if len(x) > 3 else False)
+    print(lista.data)
+    print(lista.length)
+    print("filtrada")
+    print(lista2.data)
+    print(lista2.length)
+    print("")
+
+    print("operacion join")
+    print(lista.join("_"))
+    print(lista.data)
+    print(lista.length)
+    print("")
