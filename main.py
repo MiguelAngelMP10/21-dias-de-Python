@@ -11,6 +11,8 @@ from MyList import MyList
 from ContactList import ContactList
 from TaskManager import TaskManager
 
+from PatientList import PatientList
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     toyota = Car("Toyota", "Corolla", 2020, 0)
@@ -161,3 +163,12 @@ if __name__ == '__main__':
     myTaskManager.addTask("Hacer ejercicio", ["salud"])
 
     print(myTaskManager.printTasks())
+
+    list = PatientList(3)
+    list.addPatient("Paciente 1", 20)
+    list.addPatient("Paciente 2", 30)
+
+    print(list.getPatientList())
+
+    list.removePatient("Paciente 1")
+    print(list.getPatientList())
