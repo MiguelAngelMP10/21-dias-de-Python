@@ -8,6 +8,7 @@ from Animal import Animal
 from Dog import Dog
 from Mammal import Mammal
 from MyList import MyList
+from ContactList import ContactList
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -143,3 +144,12 @@ if __name__ == '__main__':
     print(lista.data)
     print(lista.length)
     print("")
+
+    contactList = ContactList(10)
+    contactList.insert("Mr michi", "123-456-7890")
+    print(contactList.retrieveAll())
+
+    contactList = ContactList(10)
+    contactList.insert("Mr michi", "123-456-7890")
+
+    print(contactList.get("Mr Michi"))
