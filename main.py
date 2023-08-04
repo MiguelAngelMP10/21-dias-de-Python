@@ -15,6 +15,8 @@ from PatientList import PatientList
 
 from Playlist import Playlist
 
+from QueueMail import QueueMail
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     toyota = Car("Toyota", "Corolla", 2020, 0)
@@ -182,3 +184,14 @@ if __name__ == '__main__':
     playlist.addSong("Hotel California")
 
     print(playlist.getPlaylist())
+
+    queue = QueueMail()
+
+    queue.enqueue(
+        "user1@example.com",
+        "support@example.com",
+        "Body 1",
+        "Subject 1"
+    )
+
+    print(queue.size())
